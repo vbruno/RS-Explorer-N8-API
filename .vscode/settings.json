@@ -9,6 +9,7 @@
   "cSpell.words": [
     "AUTOINCREMENT",
     "DATETIME",
+    "knexfile",
     "sqlite",
     "VARCHAR"
   ],
