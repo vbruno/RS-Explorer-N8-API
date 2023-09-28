@@ -1,0 +1,31 @@
+@resource = users
+
+###
+GET {{url}}/{{resource}}/ HTTP/1.1
+
+###
+# @name createUser
+POST {{url}}/{{resource}}/ HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Amanda O. Velho",
+    "email": "amanda@teste.com.br",
+    "password": "12345",
+    "isAdmin": true
+}
+
+###
+# @name updateUser
+@id = 2
+PUT {{url}}/{{resource}}/{{id}} HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Amanda O Velho",
+    "email": "amanda@teste.com.br",
+    "password": "12345",
+    "isAdmin": true
+}
+
+###

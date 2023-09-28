@@ -1,0 +1,17 @@
+{
+  "rest-client.environmentVariables": {
+
+    "$shared": {
+      "url": "http://localhost:3333"
+    },
+
+  },
+  "cSpell.words": [
+    "AUTOINCREMENT",
+    "sqlite",
+    "VARCHAR"
+  ],
+  "cSpell.enableFiletypes": [
+    "sqlite"
+  ],
+}
