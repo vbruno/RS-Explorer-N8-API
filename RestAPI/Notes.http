@@ -1,0 +1,36 @@
+@resource = notes
+
+###
+GET {{url}}/{{resource}}/ HTTP/1.1
+
+###
+# @name createNote
+POST {{url}}/{{resource}}/1
+content-type: application/json
+
+{
+    "title": "Introdução Nodejs",
+    "description": "Essa é uma nota de exemplo.",
+    "tags": ["node", "express"],
+    "links": ["link1", "link2"]
+
+}
+
+###
+###
+
+# @name updateNote
+@id = 2
+PUT {{url}}/{{resource}}/{{id}} HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Amanda O Velho",
+    "email": "amanda@teste.com.br",
+    "password": "12345",
+    "isAdmin": true
+}
+
+###
+
+
