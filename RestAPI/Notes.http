@@ -17,6 +17,10 @@ content-type: application/json
 }
 
 ###
+# @name getNote
+@idNote = 1
+GET {{url}}/{{resource}}/{{idNote}} HTTP/1.1
+
 ###
 
 # @name updateNote
