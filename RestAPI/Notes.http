@@ -42,7 +42,8 @@ DELETE {{url}}/{{resource}}/{{idNote}} HTTP/1.1
 
 ###
 # @name Index
-@queryUserID = 4
+@queryUserID = 1
 @queryTitle = Nodejs
-GET {{url}}/{{resource}}?user_id={{queryUserID}}&title={{queryTitle}} HTTP/1.1
+@queryTags = node
+GET {{url}}/{{resource}}?user_id={{queryUserID}}&title={{queryTitle}}&tags={{queryTags}} HTTP/1.1
 
