@@ -54,6 +54,18 @@ class NotesController {
 
     return response.json({message: "Note deleted"});
   }
+
+  async index (request, response) {
+    const { user_id } = request.query;
+
+    const notes = await knex("notes")
+    .where({user_id})
+    .orderBy("title");
+
+    return response.json({notes});
+
+
+  }
 }
 
 
