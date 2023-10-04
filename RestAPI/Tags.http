@@ -1,0 +1,49 @@
+@resource = tags
+@id = 4
+@idNote = 2
+
+###
+GET {{url}}/{{resource}}/ HTTP/1.1
+
+###
+# @name createNote
+POST {{url}}/{{resource}}/1
+content-type: application/json
+
+{
+    "title": "Introdução Nodejs",
+    "description": "Essa é uma nota de exemplo.",
+    "tags": ["node", "express"],
+    "links": ["link1", "link2"]
+
+}
+
+###
+# @name getNote
+GET {{url}}/{{resource}}/{{idNote}} HTTP/1.1
+
+###
+
+# @name updateNote
+PUT {{url}}/{{resource}}/{{id}} HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Amanda O Velho",
+    "email": "amanda@teste.com.br",
+    "password": "12345",
+    "isAdmin": true
+}
+
+###
+# @name deleteNote
+
+DELETE {{url}}/{{resource}}/{{idNote}} HTTP/1.1
+
+###
+# @name Index
+@queryUserID = 1
+@queryTitle = Nodejs
+@queryTags = node
+GET {{url}}/{{resource}}?user_id={{queryUserID}}&title={{queryTitle}}&tags={{queryTags}} HTTP/1.1
+
